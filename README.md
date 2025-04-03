@@ -46,4 +46,9 @@
 * result = [i for i in arr if i % 2 == 0]
 * [i for i in range(1, n+1, 2)]
 
+# Stack
+* using append() and pop() - O(1) and O(1)
+* (-1) to access the top element
+* eg: reverse a list (hint: use while len(list) > ))
+
 
