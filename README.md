@@ -51,4 +51,20 @@
 * (-1) to access the top element
 * eg: reverse a list (hint: use while len(list) > ))
 
+# Queue - LIFO
+* from collections import deque
+* queue = deque(arr)
+* popleft - O(1) and append - O(1)
+* leftmost = arr[0], rightmost = [-1]
+* rotate a list left by k, [1, 2, 3, 4, 5] -> [2, 3, 4, 5, 1]
+* while i in range(k): queue.append(queue.popleft())
+
+# Double sided queue - insert and remove from both ends
+* from collections import deque
+* queue = deque(arr)
+* popleft - O(1) and append - O(1), pop() - O(1) and appendleft - O(1)
+* leftmost = arr[0], rightmost = [-1]
+* rotate a list right by k, [1, 2, 3, 4, 5] -> [5, 1, 2, 3, 4]
+* while i in range(k): queue.appendleft(queue.pop())
+
 
