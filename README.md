@@ -67,4 +67,35 @@
 * rotate a list right by k, [1, 2, 3, 4, 5] -> [5, 1, 2, 3, 4]
 * while i in range(k): queue.appendleft(queue.pop())
 
+# 2D Lists
+* rows - len(grid)
+* columns - len(grid[0])
+* grid = [[0] * 3] * 2
+* A better way to initialize a 2-D list is to use a nested list comprehension:
+* grid = [[0 for i in range(3)] for j in range(2)]
+
+# HashMap Basics
+* my_dict = {}
+* my_dict['a'] = 1 # {'a': 1}
+* my_dict = {'a': 1}
+* my_dict = {'a': 1, 'b': 2}
+* del my_dict['a'] # {}
+* my_dict.pop('b') # {}
+* my_dict.pop('c') # KeyError: 'c'
+* my_dict.pop('c', 'default') # No error, returns 'default'
+* collections module provides a class called defaultdict that is a subclass of the built-in dict class
+* It allows you to set a default value for a key that doesn't exist in the dictionary
+* freq = defaultdict(int), for num in nums: freq[num] += 1
+* d = defaultdict(list), for num in nums: d[num].append(num)
+* from collections import Counter, counter = Counter(nums)
+* counter = Counter(nums1), counter.update(nums2)
+* Dict comprehension, eg: squared = {num: num * num for num in nums}
+* Dict items(), keys() and values()
+* my_set = set()
+* my_set.add('b') # {'b'}
+* my_set.discard('b') # {}
+* my_set.discard('b') # {} (no error)
+* Set comprehension: squared = {num * num for num in nums}
+* Tuples, int and string can be used as keys in dictionary
+
 
