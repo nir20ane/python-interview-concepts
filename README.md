@@ -10,7 +10,7 @@
 # Unpacking
 # enumerate()
   * loop over an array and we needed to access both the index and the element at that index
-  * eturns a tuple of the index and the element at that index
+  * returns a tuple of the index and the element at that index
     
 # zip()
   * zip() function takes multiple lists as arguments and returns an iterator of tuples
@@ -35,8 +35,8 @@
 * using + operator - creates a new list
 
 # List Clone
-* copy() creates shallow copy
-* [:]
+* copy(original_list) creates shallow copy
+* original_list[:]
 * list(original_list)
 * import copy, copy.deepcopy(original_list) - creates deep copy, mainly for 2D lists or other complex DS
 
@@ -97,5 +97,39 @@
 * my_set.discard('b') # {} (no error)
 * Set comprehension: squared = {num * num for num in nums}
 * Tuples, int and string can be used as keys in dictionary
+
+# Heap
+* Heaps are DS that allows to insert(push) or remove(pop) based on some priority
+* by default, heap is min heap - smallest number or alphabet in lexicographical order
+* heapq, heapq.heappush(heap, element), heapq.heappop(heap)
+* heapify - to convert a list into heap
+* Max heap can be achieved by:
+  for num in nums:
+        heapq.heappush(max_heap, -num) # Negate the number
+
+  while max_heap:
+        top = -heapq.heappop(max_heap) # Negate the number back
+        print(top)
+ * Custom heap through tuples:
+ for num in nums:
+    pair = (abs(num), num)
+    heapq.heappush(heap, pair)
+
+ while heap:
+    pair = heapq.heappop(heap)
+    original_num = pair[1]
+    print(original_num) 
+  * Max heap - custom - tuple
+      for num in nums:
+         pair = (-num, num)
+         heapq.heappush(heap, pair)
+
+      output = []
+      while heap:
+         pair = heapq.heappop(heap)
+         output.append(pair[1])
+      return output
+   * nsmallest(int, arr) and nlargest(int, arr) - change order - reverse list [::-1]
+
 
 
