@@ -131,5 +131,29 @@
       return output
    * nsmallest(int, arr) and nlargest(int, arr) - change order - reverse list [::-1]
 
+# SortedDict
+* popitem() method to remove and return the first or last key-value pair in sorted order
+* pop() method to remove and return the value associated with a specific key, or the del keyword to delete a key-value pair
+* popitem() method will raise a KeyError if the dictionary is empty
+* pop() method will raise a KeyError if the key does not exist
+* del keyword will also raise a KeyError if the key does not exist
+* Time Complexity
+    * Insertion - O(logn)
+    * Access - O(logn)
+    * Deletion - O(logn)
+    * Lookup - O(logn)
+ 
+# SortedSet
+* from sortedcontainers import SortedSet
+* remove() method will raise a KeyError if the element does not exist, while the discard() method will not
+* pop() method will remove and return the largest element in the sorted set
+* pop(0) method will remove and return the smallest element in the sorted set
+* clear() method will remove all elements from the sorted set
+* Time Complexity
+    * Insertion - O(logn)
+    * Deletion - O(logn)
+    * Lookup - O(logn)
+    * clear - O(n)
+
 
 
