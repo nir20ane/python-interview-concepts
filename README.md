@@ -103,23 +103,25 @@
 * by default, heap is min heap - smallest number or alphabet in lexicographical order
 * heapq, heapq.heappush(heap, element), heapq.heappop(heap)
 * heapify - to convert a list into heap
-* Max heap can be achieved by:
+* Max heap:
   for num in nums:
         heapq.heappush(max_heap, -num) # Negate the number
 
   while max_heap:
         top = -heapq.heappop(max_heap) # Negate the number back
         print(top)
+  
  * Custom heap through tuples:
- for num in nums:
+  for num in nums:
     pair = (abs(num), num)
     heapq.heappush(heap, pair)
 
- while heap:
+  while heap:
     pair = heapq.heappop(heap)
     original_num = pair[1]
     print(original_num) 
-  * Max heap - custom - tuple
+    
+  * Custom heap - Max Heap - tuple
       for num in nums:
          pair = (-num, num)
          heapq.heappush(heap, pair)
